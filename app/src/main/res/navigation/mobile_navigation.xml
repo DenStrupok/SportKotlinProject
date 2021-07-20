@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.sportkotlinproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_training"
+        android:name="com.example.sportkotlinproject.ui.training.TrainingFragment"
+        android:label="@string/training"
+        tools:layout="@layout/fragment_training" />
+
+    <fragment
+        android:id="@+id/nav_food"
+        android:name="com.example.sportkotlinproject.ui.food.FoodFragment"
+        android:label="@string/food"
+        tools:layout="@layout/fragment_food" />
+
+    <activity
+        android:id="@+id/authActivity"
+        android:name="com.example.sportkotlinproject.ui.authorization.AuthActivity"
+        android:label="AuthActivity"
+        tools:layout="@layout/activity_authorization"/>
+    <fragment
+        android:id="@+id/detailTrainingFragment"
+        android:name="com.example.sportkotlinproject.ui.detailtrainig.DetailTrainingFragment"
+        android:label="DetailTrainingFragment"
+        tools:layout="@layout/fragment_detail_training"/>
+
+</navigation>

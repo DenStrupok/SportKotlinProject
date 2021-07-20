@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/background_gradient_rose"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/s16"
+    android:paddingTop="@dimen/s16"
+    android:paddingRight="@dimen/s16"
+    android:paddingBottom="@dimen/s16"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imgDrawerHeader"
+        android:layout_width="@dimen/s100"
+        android:layout_height="@dimen/s100"
+        android:layout_marginTop="@dimen/s24"
+        android:contentDescription="@string/header_image"
+        android:background="@drawable/circle_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:id="@+id/btnPlusHeader"
+        android:layout_width="@dimen/s52"
+        android:layout_height="@dimen/s52"
+        app:layout_constraintTop_toTopOf="@id/imgDrawerHeader"
+        app:layout_constraintStart_toStartOf="@id/imgDrawerHeader"
+        app:layout_constraintEnd_toEndOf="@id/imgDrawerHeader"
+        app:layout_constraintBottom_toBottomOf="@id/imgDrawerHeader"
+        app:icon="@drawable/ic_button_plus"/>
+
+    <TextView
+        android:id="@+id/tvHeaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/s16"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s24"
+        tools:ignore="SpUsage"
+        tools:text="Name"
+        app:layout_constraintTop_toBottomOf="@id/imgDrawerHeader"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvHeaderFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/s16"
+        tools:text="Family"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s24"
+        tools:ignore="SpUsage"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
