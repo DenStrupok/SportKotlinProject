@@ -8,6 +8,7 @@ open class FoodGroup(var nameFoodGroup: String, var imgFoodGroup: Int, var list:
             parcel.readString().toString(),
             parcel.readInt(),
             TODO("list")) {
+
     }
 
     override fun describeContents(): Int {
