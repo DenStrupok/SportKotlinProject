@@ -33,5 +33,10 @@
         android:name="com.example.sportkotlinproject.ui.detailtrainig.DetailTrainingFragment"
         android:label="DetailTrainingFragment"
         tools:layout="@layout/fragment_detail_training"/>
+    <fragment
+        android:id="@+id/detailFoodFragment"
+        android:name="com.example.sportkotlinproject.ui.detailfood.DetailFoodFragment"
+        android:label="DetailFoodFragment"
+        tools:layout="@layout/fragment_detail_food"/>
 
 </navigation>

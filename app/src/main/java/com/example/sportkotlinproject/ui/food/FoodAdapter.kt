@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sportkotlinproject.R
+import com.example.sportkotlinproject.interfaces.FoodAdapterItemClick
 import com.example.sportkotlinproject.pojo.FoodGroup
 
-class FoodAdapter: RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
+class FoodAdapter(val listener: FoodAdapterItemClick): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
 
     lateinit var listFood: MutableList<FoodGroup?>
 
@@ -29,6 +30,10 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvNameFoodGroupAdapter.text = listFood[position]?.nameFoodGroup
         Glide.with(holder.imgAdapterFood).load(listFood[position]?.imgFoodGroup).into(holder.imgAdapterFood)
+        holder.itemClickFoodAdapter.setOnClickListener {
+            val foodGroup = listFood[position]
+            foodGroup.let { listener.clickFoodGroupAdapter(foodGroup!!) }
+        }
     }
 
     override fun getItemCount(): Int {
